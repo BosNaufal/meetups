@@ -11,7 +11,7 @@ Sebenernya tinggal buka aja codingannya. Silahkan dipelajari ulang. Tapi untuk t
 - https://medium.com/bosnaufalid/redux-dan-segala-kerumitannya-untuk-pemula-90a63726f4be
 - https://dev.to/chrisachard/redux-crash-course-with-hooks-a54
 
-
+# [LIVE CODING SOURCE CODE DISINI](https://github.com/BosNaufal/meetups/tree/master/memahami-redux-dengan-sederhana)
 
 # MATERI (UNTUK PEMATERI)
 
