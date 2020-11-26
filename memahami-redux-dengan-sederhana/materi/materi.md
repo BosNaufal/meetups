@@ -1,6 +1,15 @@
 
+# MATERI UNTUK PESERTA
+Sebenernya tinggal buka aja codingannya. Silahkan dipelajari ulang. Tapi untuk teorinya bisa akses link-link di bawah ini:
 
-# MATERI
+- bisa buka file png [di sini](./slide-redux.png)
+- atau bisa open file di [https://excalidraw.com/](https://excalidraw.com/) menggunakan [file ini](./redux-done)
+
+# Materi Penunjang
+- https://github.com/BosNaufal/javascript-sabuk-putih
+
+
+# MATERI (UNTUK PEMATERI)
 
 1. Struktur Component
 2. Install Redux dan Tambahkan Store Provider
