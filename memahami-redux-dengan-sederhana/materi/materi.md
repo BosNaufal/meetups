@@ -8,6 +8,9 @@ Sebenernya tinggal buka aja codingannya. Silahkan dipelajari ulang. Tapi untuk t
 
 # Materi Penunjang
 - https://github.com/BosNaufal/javascript-sabuk-putih
+- https://medium.com/bosnaufalid/redux-dan-segala-kerumitannya-untuk-pemula-90a63726f4be
+- https://dev.to/chrisachard/redux-crash-course-with-hooks-a54
+
 
 
 # MATERI (UNTUK PEMATERI)
