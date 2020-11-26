@@ -2,6 +2,7 @@
 # MATERI UNTUK PESERTA
 Sebenernya tinggal buka aja codingannya. Silahkan dipelajari ulang. Tapi untuk teorinya bisa akses link-link di bawah ini:
 
+- Bisa langsung open [shareable link](https://excalidraw.com/#json=5664353789411328,JBUqb0uH5NgmxNIaEuXGRw)
 - bisa buka file png [di sini](./slide-redux.png)
 - atau bisa open file di [https://excalidraw.com/](https://excalidraw.com/) menggunakan [file ini](./redux-done)
 
@@ -45,7 +46,7 @@ const VIDEO_LIST = [
     id: 3, 
     title: "Prank Mancing Buaya di Rawa",
     description: "Niat awal mau ngeprank temen, eh gak taunya malah nyasar di rawa. dan gak nyangka bisa ketemu....",
-    src: "assets/videos/mixkit-forest-stream-in-the-sunlight-529-small.mp4",
+    src: "/assets/videos/mixkit-forest-stream-in-the-sunlight-529-small.mp4",
     viewsCount: 1, 
   }
 ]
@@ -94,7 +95,9 @@ const VIDEO_LIST = [
   case PLAY_VIDEO: {
     return {
       ...state,
-      currentVideo: state.videoList.find((video) => video.id === action.payload)
+      currentVideo: state.videoList.find((video) => 
+        video.id === action.payload
+      )
     }
   }
   ```
