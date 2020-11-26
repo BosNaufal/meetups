@@ -1,31 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux' 
 import styled from '@emotion/styled'
 import VideoItem from './VideoItem'
 import Autoplay from './Autoplay';
 
-const VIDEO_LIST = [
-  { 
-    id: 1, 
-    title: "Ini Video statis",
-    viewsCount: 1000, 
-  },
-  { 
-    id: 2, 
-    title: "Ini Video statis",
-    viewsCount: 1000, 
-  },
-  { 
-    id: 3, 
-    title: "Ini Video statis",
-    viewsCount: 1000, 
-  }
-]
-
 const VideoList = () => {
+  const videoList = useSelector((state) => state.videoList)
   return (
     <Wrapper>
       <Autoplay />
-      {VIDEO_LIST.map((item, index) => (
+      {videoList.map((item, index) => (
         <VideoItem
           key={index}
           id={item.id}

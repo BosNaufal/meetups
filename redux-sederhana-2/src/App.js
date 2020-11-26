@@ -1,7 +1,9 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import styled from '@emotion/styled'
 import VideoSection from './components/VideoSection'
 import VideoListSection from './components/VideoListingSection'
+import store from './store'
 
 const PageWrapper = styled.div`
   display: flex;
@@ -14,10 +16,12 @@ const PageWrapper = styled.div`
 
 function App() {
   return (
-    <PageWrapper>
-      <VideoSection />
-      <VideoListSection />
-    </PageWrapper>
+    <Provider store={store}>
+      <PageWrapper>
+        <VideoSection />
+        <VideoListSection />
+      </PageWrapper>
+    </Provider>
   );
 }
 

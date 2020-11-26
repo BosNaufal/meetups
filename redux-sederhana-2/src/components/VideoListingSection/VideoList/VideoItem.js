@@ -1,18 +1,29 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import styled from '@emotion/styled'
+import { PLAY_VIDEO } from '../../../store/reducer'
 
 const VideoItem = ({
   id,
   title,
   viewsCount,
 }) => {
+  const dispatch = useDispatch()
+
+  const playVideo = () => {
+    dispatch({
+      type: PLAY_VIDEO,
+      id: id,
+    })
+  }
+
   return (
     <Wrapper>
       <div>
         <Thumbnail />
       </div>
       <div>
-        <VideoTitle>
+        <VideoTitle onClick={playVideo}>
           {title}
         </VideoTitle>
         <ViewsCount>{viewsCount} Views</ViewsCount>
