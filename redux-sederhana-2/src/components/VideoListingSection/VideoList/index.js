@@ -1,36 +1,37 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { useSelector } from 'react-redux'
 import VideoItem from './VideoItem'
 import Autoplay from './Autoplay';
 
-const VIDEO_LIST = [
-  { 
-    id: 1, 
-    title: "Tutorial Menuangkan Kopi Bubuk",
-    src: "/assets/videos/mixkit-coffee-powder-being-poured-on-the-coffee-maker-filter-4984.mp4",
-    viewsCount: 1, 
-  },
-  { 
-    id: 2, 
-    title: "Manfaat Mengingat Waktu yang Terbatas",
-    src: "/assets/videos/mixkit-slowly-approaching-a-clock-on-a-black-background-28897.mp4",
-    viewsCount: 1, 
-  },
-  { 
-    id: 3, 
-    title: "Prank Mancing Buaya di Rawa",
-    src: "public/assets/videos/mixkit-forest-stream-in-the-sunlight-529-small.mp4",
-    viewsCount: 1, 
-  }
-]
+// const VIDEO_LIST = [
+//   { 
+//     id: 1, 
+//     title: "Ini Video statis",
+//     viewsCount: 1000, 
+//   },
+//   { 
+//     id: 2, 
+//     title: "Ini Video statis",
+//     viewsCount: 1000, 
+//   },
+//   { 
+//     id: 3, 
+//     title: "Ini Video statis",
+//     viewsCount: 1000, 
+//   }
+// ]
 
 const VideoList = () => {
+  const videoList = useSelector((state) => state.videoList)
+
   return (
     <Wrapper>
       <Autoplay />
-      {VIDEO_LIST.map((item, index) => (
+      {videoList.map((item, index) => (
         <VideoItem
           key={index}
+          id={item.id}
           title={item.title}
           viewsCount={item.viewsCount}
         />

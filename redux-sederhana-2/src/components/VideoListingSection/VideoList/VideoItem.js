@@ -1,22 +1,32 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import styled from '@emotion/styled'
+import { playVideoById } from '../../../store/actions'
 
 const VideoItem = ({
+  id,
   title,
   viewsCount,
-}) => (
-  <Wrapper>
-    <div>
-      <Thumbnail />
-    </div>
-    <div>
-      <VideoTitle>
-        <a href="#">{title}</a>
-      </VideoTitle>
-      <ViewsCount>{viewsCount} Views</ViewsCount>
-    </div>
-  </Wrapper>
-)
+}) => {
+  const dispatch = useDispatch()
+  const handleClick = () => {
+    dispatch(playVideoById(id))
+  }
+
+  return (
+    <Wrapper>
+      <div>
+        <Thumbnail />
+      </div>
+      <div>
+        <VideoTitle onClick={handleClick}>
+          {title}
+        </VideoTitle>
+        <ViewsCount>{viewsCount} Views</ViewsCount>
+      </div>
+    </Wrapper>
+  )
+}
 
 export default VideoItem;
 
@@ -40,8 +50,6 @@ const VideoTitle = styled.h2`
   width: auto;
   margin: 0;
   font-size: 18px;
-  a {
-    text-decoration: none;
-    color: #00ca9c;
-  }
+  color: #00ca9c;
+  cursor: pointer;
 `
