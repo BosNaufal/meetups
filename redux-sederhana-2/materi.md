@@ -4,6 +4,7 @@
 
 1. Struktur Component
 2. Install Redux dan Tambahkan Store Provider
+
 ```javascript
 const store = createStore(
   rootReducer,
@@ -11,8 +12,8 @@ const store = createStore(
 )
 ```
 3. connect Video List dengan redux.
-  - Bikin reducer.js
-  - Jelaskan useSelector dan cara ambil statenya
+  - Bikin `reducer.js`
+  - Jelaskan `useSelector` dan cara ambil statenya
 
 ```javascript
 // BASE VIDEO LIST
@@ -20,19 +21,22 @@ const VIDEO_LIST = [
   { 
     id: 1, 
     title: "Tutorial Menuangkan Kopi Bubuk",
+    description: "Menuangkan kopi bubuk juga perlu belajar lho ges...",
     src: "/assets/videos/mixkit-coffee-powder-being-poured-on-the-coffee-maker-filter-4984.mp4",
     viewsCount: 1, 
   },
   { 
     id: 2, 
     title: "Manfaat Mengingat Waktu yang Terbatas",
+    description: "Jangan pernah merasa waktu kita banyak guis, manfaatkan waktu sebaik mungkin untuk hidup dan mati kita.",
     src: "/assets/videos/mixkit-slowly-approaching-a-clock-on-a-black-background-28897.mp4",
     viewsCount: 1, 
   },
   { 
     id: 3, 
     title: "Prank Mancing Buaya di Rawa",
-    src: "/assets/videos/mixkit-forest-stream-in-the-sunlight-529-small.mp4",
+    description: "Niat awal mau ngeprank temen, eh gak taunya malah nyasar di rawa. dan gak nyangka bisa ketemu....",
+    src: "assets/videos/mixkit-forest-stream-in-the-sunlight-529-small.mp4",
     viewsCount: 1, 
   }
 ]
@@ -57,7 +61,7 @@ const VIDEO_LIST = [
   - bikin rancangan action nya dulu
 
   ```javascript
-  // bikin rancangan action
+  // bikin action
   const action = {
     type: PLAY_VIDEO,
     payload: 1 // id dari video

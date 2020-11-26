@@ -1,5 +1,3 @@
-import dotProp from 'dot-prop-immutable'
-
 const initialState = {
   currentVideo: { 
     id: 1, 
