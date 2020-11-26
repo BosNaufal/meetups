@@ -1,25 +1,18 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
 import styled from '@emotion/styled'
-import { playVideoById } from '../../../store/actions'
 
 const VideoItem = ({
   id,
   title,
   viewsCount,
 }) => {
-  const dispatch = useDispatch()
-  const handleClick = () => {
-    dispatch(playVideoById(id))
-  }
-
   return (
     <Wrapper>
       <div>
         <Thumbnail />
       </div>
       <div>
-        <VideoTitle onClick={handleClick}>
+        <VideoTitle>
           {title}
         </VideoTitle>
         <ViewsCount>{viewsCount} Views</ViewsCount>
